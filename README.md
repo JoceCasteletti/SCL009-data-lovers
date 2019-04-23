@@ -15,6 +15,13 @@
 
 ***
 
+## Prototipo de baka fidelidad
+
+![Prototipo1](./src/img/prototipo1.jpg)
+![Prototipo2](./src/img/prototipo2.jpg)
+![Prototipo3](./src/img/prototipo3.jpg)
+![Prototipo4](./src/img/prototipo4.jpg)
+
 ## **1. Preámbulo**
 
 Según un [estudio de IBM](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN),
