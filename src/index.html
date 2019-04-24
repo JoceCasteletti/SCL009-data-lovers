@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
@@ -17,6 +18,18 @@
     <section id="welcome">
       <p>Bienvenido a PokemonGo!</p>
     </section>
+    <!-- Botón para buscar por nombre o id de pokemon -->
+    <section>
+      <form class="form-inline">
+        <input aria-label="Search" class="form-control mr-sm-2" placeholder="Nombre / Id pokemón" type="search"/>
+        <button class="btn btn-buscar" type="submit">
+            Buscar
+        <button class="btn btn-buscar" type="">
+                <i class="fas fa-search"></i>
+        </button>
+    </form>
+    </section>
+
     <section id="instructions">
       <p>
         Instrucciones:
@@ -29,12 +42,24 @@
     <section id="start">
       <button id="Comenzar">Comenzar!</button>
     </section>
+    <select name="select-example">
+      <option value="value1">Huevos</option>
+      <option value="value2" >Tipos</option>
+    </select>
+  </section>
   </main>
   <footer>
-
+    <div class="col col-sm-6 ">
+      <ul>
+        <li>Condiciones Genereales de Uso</li>
+        <li>Política de Privacidad</li>
+        <li>Denunciar un contenido ilegal</li>
+      </ul>
+    </div>
   </footer>
-  <div id="root"></div>
-
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
