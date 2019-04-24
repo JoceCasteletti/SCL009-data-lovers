@@ -1,10 +1,13 @@
-/* Manejo de data */
 
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
+const filter = (data,condition) => {
+if(condition == 'all') {
+  return data;
+}
+  
+ 
 
-const example = () => {
-  return 'example';
-};
-
-window.example = example;
+const filterData = POKEMON.pokemon;
+  for(let i=0; i<filterData.lenght; i++) {
+    console.log(filterData[i].name);
+   }
+}
