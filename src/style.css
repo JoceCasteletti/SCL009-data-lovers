@@ -2,3 +2,31 @@ body {
     background-image: url(https://stmed.net/sites/default/files/pokemon-go-hd-wallpapers-33512-150570.jpg);
     background-size : cover ;
 }
+
+.card img {
+    max-width: 100px;
+}
+
+/* @media (min-width: 576px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-columns {
+        column-count: 4;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-columns {
+        column-count: 5;
+    }
+} */

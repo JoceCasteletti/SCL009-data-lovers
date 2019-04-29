@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -18,7 +19,6 @@
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -32,14 +32,15 @@
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Nombre / Id pokemón" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            <input id="search" class="form-control mr-sm-2" type="search" placeholder="Nombre / Id pokemón"
+              aria-label="Search">
+            <button id="btn_search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
           </form>
         </div>
       </nav>
     </nav>
   </header>
-  <main>
+  <main class="container-fluid">
     <section id="welcome">
       <p>Bienvenido a PokemonGo!</p>
     </section>
@@ -57,19 +58,33 @@
       <button id="Comenzar">Comenzar!</button>
       <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Comenzar!</a>
 
-    </section id=Types>
-      <button id="Type">Tipos</button>
-      <button id="Eggs">Huevos</button>
-      <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
     </section>
-  </main> 
+    <section>
+      <button id="type">Tipos</button>
+      <button id="eggs">Huevos</button>
+      <select class="form-control menu" id="select_type">
+        <option value="all">Tipos de Pokémon</option>
+        <option value="Bug">Bug</option>
+        <option value="Dragon">Dragon</option>
+        <option value="Electric">Electric</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Flying">Flying</option>
+        <option value="Ghost">Ghost</option>
+        <option value="Grass">Grass</option>
+        <option value="Ground">Ground</option>
+        <option value="Ice">Ice</option>
+        <option value="Normal">Normal</option>
+        <option value="Poison">Poison</option>
+        <option value="Psychic">Psychic</option>
+        <option value="Rock">Rock</option>
+        <option value="Water">Water</option>
+      </select>
+
+    </section>
+    <section id="pokemon_list" class="card-columns">
+
+    </section>
+  </main>
   <footer>
 
   </footer>
