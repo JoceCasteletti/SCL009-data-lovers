@@ -27,3 +27,19 @@ window.filterByName = filterByName
 // }
 
 // window.filterBy = filterBy
+
+// ordenar de la A - Z
+let order = data.sort((a, b) => {
+  if (a.name > b.name) {
+    return 1;
+  }
+  return -1;
+});
+
+//ordenar de la Z-A
+let orderInverse = data.sort((a, b) => {
+  if (a.name < b.name) {
+    return 1;
+  }
+  return -1;
+});
