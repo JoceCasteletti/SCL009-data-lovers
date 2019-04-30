@@ -11,7 +11,7 @@ window.filterByType = filterByType
 //Buscador 
 let filterByName = (data, searchText) => {
   //return data.filter(element => element.name===name)
-  
+
   //Se pasa a minúscula el nombre del pokemon y la búsqueda que hace el usuario 
   //para comparar ambos nombres en minúscula
   // Pikachu no es lo mismo que pikachu
@@ -29,17 +29,27 @@ window.filterByName = filterByName
 // window.filterBy = filterBy
 
 // ordenar de la A - Z
-let order = data.sort((a, b) => {
-  if (a.name > b.name) {
-    return 1;
-  }
-  return -1;
-});
+const sortByName = (data, name, sortOrder) => {
+  let order = data.sort((a, b) => {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name = b.name) {
+      return 0;
+    }
+    return -1;
+  });
+  
+  //ordenar de la Z-A
+  let sortByName = data.sort((a, b) => {
+    if (a.name < b.name) {
+      return 1;
+    }
+    if (a.name = b.name) {
+      return 0;
+    }
+    return -1;
+  });
+}
 
-//ordenar de la Z-A
-let orderInverse = data.sort((a, b) => {
-  if (a.name < b.name) {
-    return 1;
-  }
-  return -1;
-});
+window.sortByName = sortByName;
