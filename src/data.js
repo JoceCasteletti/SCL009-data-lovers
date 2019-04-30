@@ -1,17 +1,3 @@
-//Mostrar toda la data al momento que cargue la página
-const filter = (data,condition) => {
-if(condition == 'all') {
-  return data;
-}
-  
- 
-
-const filterData = POKEMON.pokemon;
-  for(let i=0; i<filterData.lenght; i++) {
-    console.log(filterData[i].name);
-   }
-}
-
 //Filtrar por tipo de pokemon, si incluye grass por ejemplo retorna verdadero o falso y al final retorna
 //todos los pokemones que contengan el filtro grass
 const filterByType = (data, type) => {
@@ -21,3 +7,23 @@ const filterByType = (data, type) => {
 }
 
 window.filterByType = filterByType
+
+//Buscador 
+let filterByName = (data, searchText) => {
+  //return data.filter(element => element.name===name)
+  
+  //Se pasa a minúscula el nombre del pokemon y la búsqueda que hace el usuario 
+  //para comparar ambos nombres en minúscula
+  // Pikachu no es lo mismo que pikachu
+  return data.filter(element => element.name.toLowerCase().includes(searchText.toLowerCase()))
+}
+
+window.filterByName = filterByName
+
+// const filterBy = (data, field, value) => {
+//   return data.filter(item => {
+//     return item[field].includes(value);
+//   });
+// }
+
+// window.filterBy = filterBy

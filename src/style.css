@@ -5,6 +5,11 @@ body {
 
 .card img {
     max-width: 100px;
+    
+}
+
+.card{
+    background-color: rgb(110, 196, 218);
 }
 
 /* @media (min-width: 576px) {

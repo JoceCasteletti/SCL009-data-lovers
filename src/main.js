@@ -1,24 +1,20 @@
+// EMPIEZA: Referencias a los elementos del DOM
 const pokemonList = document.getElementById('pokemon_list')
 const selectType = document.getElementById('select_type')
+const btnSearch = document.getElementById('btn_search');
+// FIN: Referencias a los elementos del DOM
 
+// EMPIEZA: Se deja referencia al arreglo de los pokémon
 let data = POKEMON.pokemon;
-let name = "Pikachu";
+// FIN: Se deja referencia al arreglo de los pokémon
 
-let filterByName = (data, name) => {
-   return data.filter(element => element.name===name)
-}
-/*
-document.getElementById('pokemon').innerHTML=all;
-for(var i = 0; i < name.length; i++){
-   return name[i];
-}
-*/
-//console.log(filterByName(data, name));
+// EMPIEZA: Acá se declaran las funciones que manipulan el DOM
 
 //Funcion mostrar data dentro de una tarjeta de bootstrap
 const showData = (data) => {
    let html = '';
 
+   //se ejecuta la función por cada elemento del arreglo
    data.forEach(element => {
       html += `
       <div class="card">
@@ -36,15 +32,16 @@ const showData = (data) => {
    //Imprimir tarjeta en html
    pokemonList.innerHTML = html
 }
+// FIN: Acá se declaran las funciones que manipulan el DOM
 
 //showData(window.pokemon.pokemon)
 //showData(window.filterByType(data, "Electric"))
 
 
 
-const btnSearch = document.getElementById("btn_search");
 
 
+// EMPIEZA: Acá se agregan los eventos de los elementos del DOM
 btnSearch.addEventListener("click", () => {
    const search = document.getElementById("search").value;
    const pokemonList = filterByName(data, search);
@@ -52,9 +49,16 @@ btnSearch.addEventListener("click", () => {
    showData(pokemonList);
 });
 
+//Al momento de cambiar el tipo de pokemon en el select se dispara el evento change
 selectType.addEventListener('change', () => {
    const type = selectType.value;
    const pokemonList = filterByType(data, type);
 
    showData(pokemonList);
 });
+
+//Cuando termine de cargar la página va a desplegar la lista de pokemones
+window.addEventListener('load', () => {
+   showData(data);
+});
+// FIN: Acá se agregan los eventos de los elementos del DOM
