@@ -2,6 +2,8 @@
 const pokemonList = document.getElementById('pokemon_list')
 const selectType = document.getElementById('select_type')
 const btnSearch = document.getElementById('btn_search');
+const orderPokemon = document.getElementById('order_pokemon');
+
 // FIN: Referencias a los elementos del DOM
 
 // EMPIEZA: Se deja referencia al arreglo de los pokémon
@@ -62,3 +64,9 @@ window.addEventListener('load', () => {
    showData(data);
 });
 // FIN: Acá se agregan los eventos de los elementos del DOM
+
+orderPokemon.addEventListener('change', ( )=> {
+   
+})
+
+showData(data);
