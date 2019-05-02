@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -18,22 +19,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#"> Instrucciones <span class="sr-only">(current)</span></a>
+                </li>
             <li class="nav-item active">
               <a class="nav-link" href="https://pokemongolive.com/es/post/">Blog pokemon <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="https://www.facebook.com/groups/927707053975442/">Comunidad pokemon Chile <span class="sr-only">(current)</span></a>
             </li>
-            <li   class="nav-item">
-              <a  href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_419" 
-              class="nav-link" alt ="fotos">Descarga POKEMON GO </a>
-            </li>
-            <li id="Galeria"  class="nav-item">
-              <a  href="https://wallpapercave.com/pokemon-hd-wallpaper" class="nav-link" alt ="fotos">Galeria de fotos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Descargar PokemonGo
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_419">Descarga para Android</a>
+                  <a class="dropdown-item" href="https://itunes.apple.com/es/app/pok%C3%A9mon-go/id1094591345?mt=8">Descargar para IOS</a>
+                </div>
+              </li>
+            
+      
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input id="search" class="form-control mr-sm-2" type="search" placeholder="Nombre / Id pokemón"
@@ -46,9 +51,14 @@
   </header>
   <main class="container-fluid">
     <section>
-      <button id="type">Tipos</button>
-      <button id="eggs">Huevos</button>
-      <select class="form-control menu" id="select_type">
+        <select class="form-control menu" id="select_egg">
+            <option value="eggs">Huevos</option>
+            <option value="2km">2 Km</option>
+            <option value="5km">5 Km</option>
+            <option value="7km">7 km</option>
+            <option value="10km">10 Km</option>
+          </select>
+          <select class="form-control menu" id="select_type">
           <option value="all">Tipos de Pokémon</option>
           <option value="Water">Agua</option>
           <option value="Bug">Bicho</option>
