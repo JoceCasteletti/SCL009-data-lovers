@@ -1,25 +1,49 @@
 body {
-    background-color: coral;
+
+    background-image:url('https://wallpapercave.com/wp/BAB2GMy.jpg');
+    
+    
 }  
 .card img {
-    max-width: 100px; 
-   }
+    max-width: 100px;
+    float: right;
+    text-align: center;
+    justify-content: center;
+    
+    }
 .card{
     background-color: rgb(110, 196, 218);
+    margin-top: 50px; 
+    border-color:black;
+    border-style: solid;
+    border-width: 2px;
+   
 }
-#select_type {
+.form-control{
     width:300px;
-    margin-top: 30px;  
-    margin-bottom: 5px;  
+    margin-top: 13px;  
+    margin-bottom: 15px;  
     
 }
-#order_pokemon{
-width:300px;
-margin-bottom: 40px;
-
-
+.navbar-expand-lg{
+    height: 45px;
+    margin-bottom: 50px; 
 
 }
+.nav-item{
+    margin-left: 50px;
+    font-family: 'Frank Ruhl Libre', serif;
+}
+.form-control{
+    border-color:black;
+    border-style: solid;
+    border-width: 2px;
+
+}
+
+
+
+
 /* @media (min-width: 576px) {
     .card-columns {
         column-count: 2;
