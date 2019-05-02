@@ -4,10 +4,10 @@ require('../src/data');
 require('./data.spec.js');
 
 
-describe('example', () => {
+describe('filterByType', () => {
   
   it('debería ser una función', () => {
-    assert.equal(typeof example, 'function');
+    assert.equal(typeof filterByType, 'function');
   });
 
   it('debería retornar "example"', () => {
@@ -16,3 +16,10 @@ describe('example', () => {
 })
 
 
+describe('filterByType', () => {
+  
+  it('debería retornar Pikachu para "Electric"', () => {
+    assert.equal(window.filterByType, (data,'Electric'));
+  });
+
+})

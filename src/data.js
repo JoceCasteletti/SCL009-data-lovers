@@ -29,7 +29,7 @@ window.filterByName = filterByName
 // window.filterBy = filterBy
 
 // ordenar de la A - Z
-const sortByName = (data, name, sortOrder) => {
+const sortByName = (data, sortBy, sortOrder) => {
   let order = data.sort((a, b) => {
     if (a.name > b.name) {
       return 1;
@@ -39,17 +39,20 @@ const sortByName = (data, name, sortOrder) => {
     }
     return -1;
   });
+
+}
   
   //ordenar de la Z-A
-  let sortByName = data.sort((a, b) => {
-    if (a.name < b.name) {
-      return 1;
-    }
-    if (a.name = b.name) {
-      return 0;
-    }
-    return -1;
-  });
-}
+  // const sortByName = (data, name, sortOrder) => {
+  // let ordered = data.sort((a, b) => {
+  //   if (a.name < b.name) {
+  //     return 1;
+  //   }
+  //   if (a.name = b.name) {
+  //     return 0;
+  //   }
+  //   return -1;
+  // });
+
 
 window.sortByName = sortByName;

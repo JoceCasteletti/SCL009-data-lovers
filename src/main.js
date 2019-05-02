@@ -66,7 +66,8 @@ window.addEventListener('load', () => {
 // FIN: Acá se agregan los eventos de los elementos del DOM
 
 orderPokemon.addEventListener('change', ( )=> {
-   
+   const order = orderPokemon.value;
+   const pokemonList = sortByName.value;
 })
 
 showData(data);
