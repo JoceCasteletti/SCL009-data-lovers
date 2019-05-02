@@ -2,12 +2,12 @@
 const pokemonList = document.getElementById('pokemon_list')
 const selectType = document.getElementById('select_type')
 const btnSearch = document.getElementById('btn_search');
-const orderPokemon = document.getElementById('order_pokemon');
+const sortPokemon = document.getElementById('order_pokemon');
 
 // FIN: Referencias a los elementos del DOM
 
 // EMPIEZA: Se deja referencia al arreglo de los pokémon
-let data = POKEMON.pokemon;
+let data = window.pokemon.pokemon;
 // FIN: Se deja referencia al arreglo de los pokémon
 
 // EMPIEZA: Acá se declaran las funciones que manipulan el DOM
@@ -19,6 +19,7 @@ const showData = (data) => {
    //se ejecuta la función por cada elemento del arreglo
    data.forEach(element => {
       html += `
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
       <div class="card">
       <img class="card-img-top" src="${element.img}" alt="Card image cap">
       <div class="card-body">
@@ -28,6 +29,7 @@ const showData = (data) => {
         <p class="card-text">${element.weaknesses}</p>
         <a href="#" class="btn btn-primary">Saber más!</a>
       </div>
+    </div>
     </div>`
    })
 
@@ -46,7 +48,7 @@ const showData = (data) => {
 // EMPIEZA: Acá se agregan los eventos de los elementos del DOM
 btnSearch.addEventListener("click", () => {
    const search = document.getElementById("search").value;
-   const pokemonList = filterByName(data, search);
+   const pokemonList = window.filterByName(data, search);
 
    showData(pokemonList);
 });
@@ -54,7 +56,7 @@ btnSearch.addEventListener("click", () => {
 //Al momento de cambiar el tipo de pokemon en el select se dispara el evento change
 selectType.addEventListener('change', () => {
    const type = selectType.value;
-   const pokemonList = filterByType(data, type);
+   const pokemonList = window.filterByType(data, type);
 
    showData(pokemonList);
 });
@@ -65,9 +67,10 @@ window.addEventListener('load', () => {
 });
 // FIN: Acá se agregan los eventos de los elementos del DOM
 
-orderPokemon.addEventListener('change', ( )=> {
-   const order = orderPokemon.value;
-   const pokemonList = sortByName.value;
+
+sortPokemon.addEventListener('change', ( ) => {
+   const order = sortPokemon.value;
+   showData(window.orderPokemon(data, order))
 })
 
 showData(data);

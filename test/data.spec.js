@@ -19,7 +19,7 @@ describe('filterByType', () => {
 describe('filterByType', () => {
   
   it('debería retornar Pikachu para "Electric"', () => {
-    assert.equal(window.filterByType, (data,'Electric'));
+    assert.equal(window.filterByType, (window.pokemon.pokemon,'Electric'));
   });
 
 })

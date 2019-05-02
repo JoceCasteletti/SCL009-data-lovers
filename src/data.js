@@ -29,18 +29,25 @@ window.filterByName = filterByName
 // window.filterBy = filterBy
 
 // ordenar de la A - Z
-const sortByName = (data, sortBy, sortOrder) => {
-  let order = data.sort((a, b) => {
-    if (a.name > b.name) {
+const orderPokemon = (data, sortOrder) => {
+  // TODO: Implementar opciones de orden 
+
+  const list = data.sort((a, b) => {
+    if (a.name > b.name)
       return 1;
-    }
-    if (a.name = b.name) {
-      return 0;
-    }
-    return -1;
+    if (a.name < b.name)
+      return -1;
+    return 0;
   });
 
-}
+  if (sortOrder === 'za') {
+    return list.reverse();
+  }
+
+  return list;
+};
+ 
+
   
   //ordenar de la Z-A
   // const sortByName = (data, name, sortOrder) => {
@@ -55,4 +62,7 @@ const sortByName = (data, sortBy, sortOrder) => {
   // });
 
 
-window.sortByName = sortByName;
+window.orderPokemon = orderPokemon
+
+
+
