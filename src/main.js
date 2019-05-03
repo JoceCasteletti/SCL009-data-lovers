@@ -3,6 +3,7 @@ const pokemonList = document.getElementById('pokemon_list')
 const selectType = document.getElementById('select_type')
 const btnSearch = document.getElementById('btn_search');
 const sortPokemon = document.getElementById('order_pokemon');
+const filterByEgg = document.getElementById('select_egg');
 
 // FIN: Referencias a los elementos del DOM
 
@@ -67,6 +68,13 @@ window.addEventListener('load', () => {
 });
 // FIN: Acá se agregan los eventos de los elementos del DOM
 
+
+sortPokemon.addEventListener('change', ( ) => {
+   const order = sortPokemon.value;
+   showData(window.orderPokemon(data, order))
+})
+
+showData(data);
 
 sortPokemon.addEventListener('change', ( ) => {
    const order = sortPokemon.value;

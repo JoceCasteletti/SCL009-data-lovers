@@ -8,6 +8,13 @@ const filterByType = (data, type) => {
 
 window.filterByType = filterByType
 
+const filterByEgg= (data,egg)=>{
+  return data.filter(item => {
+    return item.egg.includes(egg);
+  });
+
+}
+
 //Buscador 
 let filterByName = (data, searchText) => {
   //return data.filter(element => element.name===name)
