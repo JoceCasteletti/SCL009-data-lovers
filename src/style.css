@@ -4,62 +4,80 @@ body {
     
     
 }  
-.card img {
-    max-width: 100px;
-    float: right;
+.card {
+    background-color:coral;
+    width: 200px ; 
+    height: 330px ;
+    border: 3px solid black;
     text-align: center;
-    justify-content: center;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 80px;
     
-    }
-.card{
-    background-color: rgb(110, 196, 218);
-    margin-top: 50px; 
-    border-color:black;
-    border-style: solid;
-    border-width: 2px;
-   
-}
-
-.navbar-expand-lg{
-    margin-bottom: 50px; 
-}
-
+  }
+  .card img {
+    
+    width: 80px;
+    height: 80px;
+    align-self: center;
+    margin: 1em;
+  }
+  .card-body{
+    width: 200px;
+    height: 170px; 
+    padding: 3px ,3px ,3px ,3px;
+    align-content: center;
+  }
+  nav{
+      height:55px; 
+  }
+  form{
+      margin-right: 600px;
+      margin-left: 100px;
+  }
 .form-control{
+    width:300px;
+    margin-top: 3px;  
+    margin-bottom: 3px; 
+    display:block;
     border-color:black;
     border-style: solid;
-    border-width: 2px;
-
+    border-width: 3px;
 }
-
-
-
-
-/* @media (min-width: 576px) {
+.nav-link{
+    margin-right:85px; 
+}
+#imagen{
+    margin-left:300px;
+    margin-top:40px;
+    margin-bottom:30px;
+}
+@media (min-width: 576px) {
     .card-columns {
         column-count: 2;
     }
 }
-
 @media (min-width: 768px) {
     .card-columns {
         column-count: 3;
     }
 }
-
 @media (min-width: 992px) {
     .card-columns {
         column-count: 4;
     }
 }
-
 @media (min-width: 1200px) {
     .card-columns {
         column-count: 5;
     }
-} */
+} 
 
 .logo {
-    height: 60px;
+    height: 30px;
+    margin-right: 50px;
+    margin-left: 20;
   }
   
   
