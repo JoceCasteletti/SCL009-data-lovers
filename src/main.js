@@ -22,14 +22,13 @@ const showData = (data) => {
    data.forEach(element => {
       html += `
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-      <div class="card">
+      <div class="card" style="width: 195px;">
       <img class="card-img-top" src="${element.img}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">${element.name}</h5>
         <p class="card-text">${element.num}</p>
         <p class="card-text">${element.egg}</p>
         <p class="card-text">${element.weaknesses}</p>
-        <a href="#" class="btn btn-primary">Saber más!</a>
       </div>
     </div>
     </div>`
