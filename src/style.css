@@ -19,21 +19,11 @@ body {
     border-width: 2px;
    
 }
-.form-control{
-    width:300px;
-    margin-top: 13px;  
-    margin-bottom: 15px;  
-    
-}
-.navbar-expand-lg{
-    height: 45px;
-    margin-bottom: 50px; 
 
+.navbar-expand-lg{
+    margin-bottom: 50px; 
 }
-.nav-item{
-    margin-left: 50px;
-    font-family: 'Frank Ruhl Libre', serif;
-}
+
 .form-control{
     border-color:black;
     border-style: solid;
@@ -71,4 +61,5 @@ body {
 .logo {
     height: 60px;
   }
+  
   

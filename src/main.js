@@ -3,7 +3,8 @@ const pokemonList = document.getElementById('pokemon_list')
 const selectType = document.getElementById('select_type')
 const btnSearch = document.getElementById('btn_search');
 const sortPokemon = document.getElementById('order_pokemon');
-const filterByEgg = document.getElementById('select_egg');
+const selectEgg = document.getElementById('select_egg');
+const btnFilter = document.getElementById('filter');
 
 // FIN: Referencias a los elementos del DOM
 
@@ -45,40 +46,27 @@ const showData = (data) => {
 
 
 
-
 // EMPIEZA: Acá se agregan los eventos de los elementos del DOM
 btnSearch.addEventListener("click", () => {
    const search = document.getElementById("search").value;
-   const pokemonList = window.filterByName(data, search);
-
-   showData(pokemonList);
-});
-
-//Al momento de cambiar el tipo de pokemon en el select se dispara el evento change
-selectType.addEventListener('change', () => {
-   const type = selectType.value;
-   const pokemonList = window.filterByType(data, type);
-
-   showData(pokemonList);
+   showData(window.filterByName(data, search));
 });
 
 //Cuando termine de cargar la página va a desplegar la lista de pokemones
 window.addEventListener('load', () => {
-   showData(data);
+  showData(window.orderPokemon(data, 'a-z'));
 });
+
+btnFilter.addEventListener('click', () => {
+  const km = selectEgg.value;
+  const type = selectType.value;
+  const order = sortPokemon.value;
+
+  let pokemonList = window.filterByEgg(data, km);
+  pokemonList = window.filterByType(pokemonList, type);
+  pokemonList = window.orderPokemon(pokemonList, order);
+
+  showData(pokemonList);
+  
+})
 // FIN: Acá se agregan los eventos de los elementos del DOM
-
-
-sortPokemon.addEventListener('change', ( ) => {
-   const order = sortPokemon.value;
-   showData(window.orderPokemon(data, order))
-})
-
-showData(data);
-
-sortPokemon.addEventListener('change', ( ) => {
-   const order = sortPokemon.value;
-   showData(window.orderPokemon(data, order))
-})
-
-showData(data);

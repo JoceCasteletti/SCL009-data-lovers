@@ -88,3 +88,4 @@ describe('data.sortOrder', () => {
       }
     ]);
   });
+});

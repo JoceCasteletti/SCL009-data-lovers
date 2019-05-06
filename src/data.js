@@ -1,6 +1,10 @@
 //Filtrar por tipo de pokemon, si incluye grass por ejemplo retorna verdadero o falso y al final retorna
 //todos los pokemones que contengan el filtro grass
 const filterByType = (data, type) => {
+  if (type === 'all') {
+    return data;
+  }
+
   return data.filter(item => {
     return item.type.includes(type);
   });
@@ -8,12 +12,17 @@ const filterByType = (data, type) => {
 
 window.filterByType = filterByType
 
-const filterByEgg= (data,egg)=>{
+const filterByEgg = (data, egg)=> {
+  if (egg === 'all') {
+    return data;
+  }
+
   return data.filter(item => {
     return item.egg.includes(egg);
   });
-
 }
+
+window.filterByEgg = filterByEgg
 
 //Buscador 
 let filterByName = (data, searchText) => {
