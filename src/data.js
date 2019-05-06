@@ -82,3 +82,9 @@ window.orderPokemon = orderPokemon
 
 
 
+//calculo agregado
+const computeStats = (arr) => {
+  let result = parseInt(arr.length / 151 * 100);
+  return result;
+}
+window.computeStats = computeStats;
