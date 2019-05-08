@@ -45,7 +45,7 @@ window.filterByName = filterByName
 // window.filterBy = filterBy
 
 // ordenar de la A - Z
-const orderPokemon = (data, sortOrder,sortBy) => {
+const orderPokemon = (data, sortOrder,) => {
   // TODO: Implementar opciones de orden 
 
   const list = data.sort((a, b) => {
@@ -73,9 +73,9 @@ window.orderPokemon = orderPokemon
 //   return result;
 // }
 // window.computeStats = computeStats;
-const counterEggs = (data) => {
-let counterData = data.reduce(function(counter,egg){
-  if (egg ==="2 km") {
+const counterEggs = (data,condition) => {
+let counterData = data.reduce(function(counter,data){
+  if (data.egg.includes(condition)) {
   return counter +1 * 100 /151 ; 
  } else {
   return counter ;

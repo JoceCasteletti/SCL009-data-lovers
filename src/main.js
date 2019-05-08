@@ -6,6 +6,7 @@ const sortPokemon = document.getElementById('order_pokemon');
 const selectEgg = document.getElementById('select_egg');
 const btnFilter = document.getElementById('filter');
 
+
 // FIN: Referencias a los elementos del DOM
 
 // EMPIEZA: Se deja referencia al arreglo de los pokémon
