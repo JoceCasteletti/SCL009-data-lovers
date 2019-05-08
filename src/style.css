@@ -1,8 +1,6 @@
 body {
 
-    background-image:url('https://wallpapercave.com/wp/BAB2GMy.jpg');
-    
-    
+    background-image:url('https://wallpapercave.com/wp/BAB2GMy.jpg'  );   
 }  
 .card {
     background-color:coral;
@@ -13,11 +11,9 @@ body {
     border-radius: 10px;
     margin-right: 10px;
     margin-left: 10px;
-    margin-top: 80px;
-    
+    margin-top: 80px;   
   }
   .card img {
-    
     width: 80px;
     height: 80px;
     align-self: center;
@@ -29,24 +25,33 @@ body {
     padding: 3px ,3px ,3px ,3px;
     align-content: center;
   }
-  nav{
-      height:55px; 
-  }
   form{
-      margin-right: 600px;
-      margin-left: 100px;
+       
+      font-family: 'Contrail One', cursive;
   }
 .form-control{
-    width:300px;
+    width:500px;
     margin-top: 3px;  
     margin-bottom: 3px; 
-    display:block;
-    border-color:black;
+    display:block;  
     border-style: solid;
-    border-width: 3px;
+    border-width: 2px;
+    margin-left:40px;
+}
+#filter {
+    width:505px;
+    height:40px ;
+    margin-left:260px;
+    border-width:2px;   
 }
 .nav-link{
-    margin-right:85px; 
+    margin-right:100px; 
+    font-family: 'Contrail One', cursive;
+}
+nav{
+    height: 55px;
+    opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 #imagen{
     margin-left:300px;
@@ -76,7 +81,7 @@ body {
 
 .logo {
     height: 30px;
-    margin-right: 50px;
+    margin-right: 10px;
     margin-left: 20;
   }
   
