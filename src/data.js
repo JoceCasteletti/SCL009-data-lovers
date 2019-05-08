@@ -62,21 +62,6 @@ const orderPokemon = (data, sortOrder,sortBy) => {
 
   return list;
 };
- 
-
-  
-  //ordenar de la Z-A
-  // const sortByName = (data, name, sortOrder) => {
-  // let ordered = data.sort((a, b) => {
-  //   if (a.name < b.name) {
-  //     return 1;
-  //   }
-  //   if (a.name = b.name) {
-  //     return 0;
-  //   }
-  //   return -1;
-  // });
-
 
 window.orderPokemon = orderPokemon
 
@@ -88,12 +73,13 @@ window.orderPokemon = orderPokemon
 //   return result;
 // }
 // window.computeStats = computeStats;
-const contadorEggs =(data) => {
-let contadorData = data.reduce(function(contador,huevo){
-  if (huevo.egg ==="2 km") {
-  return contador +1 * 100 /151 ; 
+const counterEggs = (data) => {
+let counterData = data.reduce(function(counter,egg){
+  if (egg ==="2 km") {
+  return counter +1 * 100 /151 ; 
  } else {
-  return contador ;
+  return counter ;
  }
    },0)}
    
+window.counterEggs = counterEggs
