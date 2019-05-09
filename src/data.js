@@ -73,13 +73,17 @@ window.orderPokemon = orderPokemon
 //   return result;
 // }
 // window.computeStats = computeStats;
-const counterEggs = (data,condition) => {
-let counterData = data.reduce(function(counter,data){
-  if (data.egg.includes(condition)) {
-  return counter +1 * 100 /151 ; 
- } else {
-  return counter ;
- }
-   },0)}
+
+const counterEggs = (data, condition) => {
+  return data.filter(element => element.egg.includes(condition)).length * 100 / data.length;
+
+// const counterEggs = (data,condition) => {
+// let counterData = data.reduce(function(counter,data){
+//   if (data.egg.includes(condition)) {
+//   return counter +1 * 100 /151 ; 
+//  } else {
+//   return counter ;
+//  }
+//    },0)}
    
 window.counterEggs = counterEggs
