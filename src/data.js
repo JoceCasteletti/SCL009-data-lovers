@@ -77,6 +77,8 @@ window.orderPokemon = orderPokemon
 const counterEggs = (data, condition) => {
   return data.filter(element => element.egg.includes(condition)).length * 100 / data.length;
 
+};
+
 // const counterEggs = (data,condition) => {
 // let counterData = data.reduce(function(counter,data){
 //   if (data.egg.includes(condition)) {
