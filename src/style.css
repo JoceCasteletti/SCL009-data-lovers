@@ -1,88 +1,43 @@
 body {
-
-    background-image:url('https://wallpapercave.com/wp/BAB2GMy.jpg'  );   
+    background: url('https://wallpapercave.com/wp/BAB2GMy.jpg') no-repeat center center fixed;
+    background-size: cover;
 }  
+
 .card {
-    background-color:coral;
-    width: 200px ; 
-    height: 330px ;
-    border: 3px solid black;
-    text-align: center;
-    border-radius: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 80px;   
-  }
-  .card img {
-    width: 80px;
-    height: 80px;
-    align-self: center;
-    margin: 1em;
-  }
-  .card-body{
-    width: 200px;
-    height: 170px; 
-    padding: 3px ,3px ,3px ,3px;
-    align-content: center;
-  }
-  form{
-       
-      font-family: 'Contrail One', cursive;
-  }
-.form-control{
-    width:500px;
-    margin-top: 3px;  
-    margin-bottom: 3px; 
-    display:block;  
+    background-color: rgba(50, 230, 154, 0.95);
+    border-color:black;
     border-style: solid;
     border-width: 2px;
-    margin-left:40px;
 }
-#filter {
-    width:505px;
-    height:40px ;
-    margin-left:260px;
-    border-width:2px;   
+
+.card-img-wrapper {
+    padding: 2em;
+    background-color: rgba(255,255,255,0.5);
 }
-.nav-link{
-    margin-right:100px; 
-    font-family: 'Contrail One', cursive;
+
+.card-img-wrapper img {
+    max-height: 120px;
+    max-width: 120px;
 }
-nav{
-    height: 55px;
-    opacity: 0.5;
-  filter: alpha(opacity=50);
+
+.card-img-type {
+    max-width: 2em;
 }
-#imagen{
-    margin-left:300px;
-    margin-top:40px;
-    margin-bottom:30px;
+.navbar-expand-lg{
+    margin-bottom: 50px; 
 }
-@media (min-width: 576px) {
-    .card-columns {
-        column-count: 2;
-    }
+
+.form-control{
+    border-color:black;
+    border-style: solid;
+    border-width: 2px;
 }
-@media (min-width: 768px) {
-    .card-columns {
-        column-count: 3;
-    }
-}
-@media (min-width: 992px) {
-    .card-columns {
-        column-count: 4;
-    }
-}
-@media (min-width: 1200px) {
-    .card-columns {
-        column-count: 5;
-    }
-} 
 
 .logo {
-    height: 30px;
-    margin-right: 10px;
-    margin-left: 20;
+    height: 1.5em;
   }
-  
-  
+
+ footer{
+    margin-bottom: 10px; 
+    background-color:white;
+}

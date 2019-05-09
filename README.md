@@ -111,13 +111,10 @@ La encuesta cual se pueden encontrar [aquí](https://docs.google.com/forms/d/e/1
 
 ## Prototipo de baja fidelidad
 
-![Prototipo1](./src/img/prototipo1.jpg)
-
-![Prototipo2](./src/img/prototipo2.jpg)
-
-![Prototipo3](./src/img/prototipo3.jpg)
-
-![Prototipo4](./src/img/prototipo4.jpg)
+![prototipo1](./src/img/prototipo1.jpg)
+![prototipo2](./src/img/prototipo2.jpg)
+![prototipo3](./src/img/prototipo3.jpg)
+![prototipo4](./src/img/prototipo4.jpg)
 
 ## Prototipo de alta fidelidad
 
@@ -144,7 +141,7 @@ El prototipo de alta fidelidad en Zeplin lo puedes encontrar
 * [X] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
 * [X] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
+* [X] Incluye historias de usuario en `README.md`.
 * [X] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
   `README.md`.
 * [X] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
@@ -152,6 +149,6 @@ El prototipo de alta fidelidad en Zeplin lo puedes encontrar
 * [ ] Incluye link a Zeplin en `README.md`.
 * [ ] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
+* [X] UI: Muestra lista y/o tabla con datos y/o indicadores.
 * [X] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [X] UI: Permite filtrar data en base a una condición.

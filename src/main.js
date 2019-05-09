@@ -17,44 +17,98 @@ let data = window.pokemon.pokemon;
 
 //Funcion mostrar data dentro de una tarjeta de bootstrap
 const showData = (data) => {
-   let html = '';
+  let html = '';
 
-   //se ejecuta la función por cada elemento del arreglo
-   data.forEach(element => {
-      html += `
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-      <div class="card" style="width: 195px;">
-      <img class="card-img-top" src="${element.img}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">${element.name}</h5>
-        <p class="card-text">${element.num}</p>
-        <p class="card-text">${element.egg}</p>
-        <p class="card-text">${element.weaknesses}</p>
+  //se ejecuta la función por cada elemento del arreglo
+  data.forEach(element => {
+    let types = '';
+
+    element.type.forEach(element => {
+      types += `<img class="card-img-type" src="img/types/${element.toLowerCase()}.png" title="${element}">`;
+    })
+
+    html += `
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 py-3">
+      <div class="card h-100">
+        <div class="card-img-wrapper">
+        <img class="card-img mx-auto d-block" src="${element.img}" alt="${element.name}">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">${element.name}</h5>
+          <p class="card-text">Huevo: ${element.egg}</p>
+          <p class="card-text">Tipo: ${types}</p>
+          <button class="btn btn-success" data-toggle="modal" data-target="#pokemonModal" data-id="${element.id}">Ver detalles</button>
+        </div>
       </div>
-    </div>
-    </div>`
-   })
+    </div>`;
+  })
 
-   //Imprimir tarjeta en html
-   pokemonList.innerHTML = html
+  //Imprimir tarjeta en html
+  pokemonList.innerHTML = html
 }
 // FIN: Acá se declaran las funciones que manipulan el DOM
-
-//showData(window.pokemon.pokemon)
-//showData(window.filterByType(data, "Electric"))
-
-
 
 
 // EMPIEZA: Acá se agregan los eventos de los elementos del DOM
 btnSearch.addEventListener("click", () => {
-   const search = document.getElementById("search").value;
-   showData(window.filterByName(data, search));
+  const search = document.getElementById("search").value;
+  showData(window.filterByName(data, search));
 });
+
+// Código modal de boostrap https://getbootstrap.com/docs/4.0/components/modal/#varying-modal-content
+// $('#pokemonModal').on('show.bs.modal', function (event) {
+//   const button = $(event.relatedTarget) // Botón que activó el modal
+//   const pokemonId = button.data('id') // Extrayendo información de la data-id
+
+//   const pokemon = data.filter(element => element.id === pokemonId)[0]; // Obtener pokémon por su id
+//   //para poder buscar sus
+
+//   let types = '';
+
+//   pokemon.type.forEach(element => {
+//     types += `<img class="card-img-type" src="img/types/${element.toLowerCase()}.png" title="${element}">`;
+//   })
+
+//   let weaknesses = '';
+
+//   pokemon.weaknesses.forEach(element => {
+//     weaknesses += `<img class="card-img-type" src="img/types/${element.toLowerCase()}.png" title="${element}">`;
+//   })
+
+//   const title = document.getElementById('modal_title');
+
+//   title.innerHTML = pokemon.name;
+
+//   const body = document.getElementById('modal_body');
+
+//   body.innerHTML = `
+//   <div class="card h-100">
+//     <div class="card-img-wrapper">
+//     <img class="card-img mx-auto d-block" src="${pokemon.img}" alt="${pokemon.name}">
+//     </div>
+//     <div class="card-body">
+//       <p class="card-text">ID: ${pokemon.num}</p>
+//       <p class="card-text">Huevo: ${pokemon.egg}</p>
+//       <p class="card-text">Peso: ${pokemon.weight}</p>
+//       <p class="card-text">Estatura: ${pokemon.height}</p>
+//       <p class="card-text">Tipo: ${types}</p>
+//       <p class="card-text">Debilidades: ${weaknesses}</p>
+//     </div>
+//   </div>`;
+// });
 
 //Cuando termine de cargar la página va a desplegar la lista de pokemones
 window.addEventListener('load', () => {
   showData(window.orderPokemon(data, 'a-z'));
+
+  //Mostrar cálculo en el select 
+  //Llamar función counterEgg y aproximar su valor
+  selectEgg.innerHTML = `
+<option value="all">Todos</option>
+<option value="Not in Eggs">No están en huevos (${window.counterEggs(data, 'Not in Eggs').toFixed(1)}%)</option>
+<option value="2 km">2 Km (${window.counterEggs(data, '2 km').toFixed(1)}%)</option>
+<option value="5 km">5 Km (${window.counterEggs(data, '5 km').toFixed(1)}%)</option>
+<option value="10 km">10 Km (${window.counterEggs(data, '10 km').toFixed(1)}%)</option>`;
 });
 
 btnFilter.addEventListener('click', () => {
@@ -67,6 +121,6 @@ btnFilter.addEventListener('click', () => {
   pokemonList = window.orderPokemon(pokemonList, order);
 
   showData(pokemonList);
-  
+
 })
 // FIN: Acá se agregan los eventos de los elementos del DOM
