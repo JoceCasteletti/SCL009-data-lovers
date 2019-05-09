@@ -88,4 +88,4 @@ const counterEggs = (data, condition) => {
 //  }
 //    },0)}
    
-window.counterEggs = counterEggs
+// window.counterEggs = counterEggs
