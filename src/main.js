@@ -1,4 +1,4 @@
-// EMPIEZA: Referencias a los elementos del DOM
+//Referencias a los elementos del DOM
 const pokemonList = document.getElementById('pokemon_list')
 const selectType = document.getElementById('select_type')
 const btnSearch = document.getElementById('btn_search');
@@ -7,11 +7,10 @@ const selectEgg = document.getElementById('select_egg');
 const btnFilter = document.getElementById('filter');
 
 
-// FIN: Referencias a los elementos del DOM
 
-// EMPIEZA: Se deja referencia al arreglo de los pokémon
+//Se deja referencia al arreglo de los pokémon
 let data = window.pokemon.pokemon;
-// FIN: Se deja referencia al arreglo de los pokémon
+
 
 // EMPIEZA: Acá se declaran las funciones que manipulan el DOM
 
@@ -23,8 +22,15 @@ const showData = (data) => {
   data.forEach(element => {
     let types = '';
 
+    //imagenes por cada tipo de pokemon
     element.type.forEach(element => {
       types += `<img class="card-img-type" src="img/types/${element.toLowerCase()}.png" title="${element}">`;
+    })
+    
+    let weaknesses='';
+    
+    element.weaknesses.forEach(element => {
+      weaknesses += `<img class="card-img-type" src="img/types/${element.toLowerCase()}.png" title="${element}">`;
     })
 
     html += `
@@ -37,7 +43,7 @@ const showData = (data) => {
           <h5 class="card-title">${element.name}</h5>
           <p class="card-text">Huevo: ${element.egg}</p>
           <p class="card-text">Tipo: ${types}</p>
-          <button class="btn btn-success" data-toggle="modal" data-target="#pokemonModal" data-id="${element.id}">Ver detalles</button>
+          <p class="card-text">Debilidad: ${element.weaknesses}</p>
         </div>
       </div>
     </div>`;
@@ -55,7 +61,53 @@ btnSearch.addEventListener("click", () => {
   showData(window.filterByName(data, search));
 });
 
-// Código modal de boostrap https://getbootstrap.com/docs/4.0/components/modal/#varying-modal-content
+
+
+//Cuando termine de cargar la página va a desplegar la lista de pokemones
+window.addEventListener('load', () => {
+  showData(window.orderPokemon(data, 'a-z'));
+
+  //Mostrar cálculo en el select 
+  //Llamar función counterEgg y aproximar su valor
+  selectEgg.innerHTML = `
+<option value="all">Todos</option>
+<option value="Not in Eggs">No están en huevos (${window.counterEggs(data, 'Not in Eggs').toFixed(1)}%)</option>
+<option value="2 km">2 Km (${window.counterEggs(data, '2 km').toFixed(1)}%)</option>
+<option value="5 km">5 Km (${window.counterEggs(data, '5 km').toFixed(1)}%)</option>
+<option value="10 km">10 Km (${window.counterEggs(data, '10 km').toFixed(1)}%)</option>`;
+});
+
+
+//Filtro múltiple huevo,tipo y ordenar
+btnFilter.addEventListener('click', () => {
+  const km = selectEgg.value;
+  const type = selectType.value;
+  const order = sortPokemon.value;
+
+  let pokemonList = window.filterByEgg(data, km);
+  pokemonList = window.filterByType(pokemonList, type);
+  pokemonList = window.orderPokemon(pokemonList, order);
+
+  showData(pokemonList);
+
+})
+// FIN: Acá se agregan los eventos de los elementos del DOM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Código modal de boostrap https://getbootstrap.com/docs/4.0/components/modal/#varying-modal-content
 // $('#pokemonModal').on('show.bs.modal', function (event) {
 //   const button = $(event.relatedTarget) // Botón que activó el modal
 //   const pokemonId = button.data('id') // Extrayendo información de la data-id
@@ -96,31 +148,3 @@ btnSearch.addEventListener("click", () => {
 //     </div>
 //   </div>`;
 // });
-
-//Cuando termine de cargar la página va a desplegar la lista de pokemones
-window.addEventListener('load', () => {
-  showData(window.orderPokemon(data, 'a-z'));
-
-  //Mostrar cálculo en el select 
-  //Llamar función counterEgg y aproximar su valor
-  selectEgg.innerHTML = `
-<option value="all">Todos</option>
-<option value="Not in Eggs">No están en huevos (${window.counterEggs(data, 'Not in Eggs').toFixed(1)}%)</option>
-<option value="2 km">2 Km (${window.counterEggs(data, '2 km').toFixed(1)}%)</option>
-<option value="5 km">5 Km (${window.counterEggs(data, '5 km').toFixed(1)}%)</option>
-<option value="10 km">10 Km (${window.counterEggs(data, '10 km').toFixed(1)}%)</option>`;
-});
-
-btnFilter.addEventListener('click', () => {
-  const km = selectEgg.value;
-  const type = selectType.value;
-  const order = sortPokemon.value;
-
-  let pokemonList = window.filterByEgg(data, km);
-  pokemonList = window.filterByType(pokemonList, type);
-  pokemonList = window.orderPokemon(pokemonList, order);
-
-  showData(pokemonList);
-
-})
-// FIN: Acá se agregan los eventos de los elementos del DOM

@@ -5,8 +5,8 @@ const filterByType = (data, type) => {
     return data;
   }
 
-  return data.filter(item => {
-    return item.type.includes(type);
+  return data.filter(element => {
+    return element.type.includes(type);
   });
 }
 
@@ -17,8 +17,8 @@ const filterByEgg = (data, egg)=> {
     return data;
   }
 
-  return data.filter(item => {
-    return item.egg.includes(egg);
+  return data.filter(element => {
+    return element.egg.includes(egg);
   });
 }
 
@@ -79,13 +79,4 @@ const counterEggs = (data, condition) => {
 
 };
 
-// const counterEggs = (data,condition) => {
-// let counterData = data.reduce(function(counter,data){
-//   if (data.egg.includes(condition)) {
-//   return counter +1 * 100 /151 ; 
-//  } else {
-//   return counter ;
-//  }
-//    },0)}
-   
-// window.counterEggs = counterEggs
+ window.counterEggs = counterEggs
