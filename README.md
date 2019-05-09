@@ -3,7 +3,7 @@
 # **InfoPokemon**
 
 
-Puedes ver el proyecto [aquí]
+Puedes ver el proyecto [aquí](https://jocecasteletti.github.io/SCL009-data-lovers/)
 
 
 ## **Índice**
