@@ -74,7 +74,9 @@ La planificación fué realizada con [Trello](https://trello.com) la puedes enco
 
 **HU 1**  
 Como: Jugador de Pokemon.
+
 Quiero : Ver los distintos tipos de huevos que existen.
+
 Para: Coleccionar mejores pokemones.
 
 **HU 2**
@@ -87,19 +89,25 @@ Para: Coleccionar mejores pokemones.
 **HU 3**
 
 Como: Jugador de pokemon.
+
 Quiero : Ver información de las debilidades que tiene cada pokemon.
+
 Para: Poder escoger el mejor pokemon al momento de realizar un combate.
 
 **HU 4**
 
 Como: Jugador de pokemon.
+
 Quiero : Ver información de los gimnasios y combates.
+
 Para: Poder competir y ganar los combates.
 
 **HU 5**
 
 Como: Jugador de pokemon.
+
 Quiero : Saber el porcentaje de pokemones por huevos y tipo
+
 Para: Encontrar el de mi preferencia.
 
 ### Encuesta 📋
