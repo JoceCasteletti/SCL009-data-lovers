@@ -1,5 +1,6 @@
 # **InfoPokemon**
 
+
 Puedes ver el proyecto [aquí]
 
 
@@ -28,15 +29,25 @@ Info Pokemón es una aplicación dirigida a todos los jugadores de Pokémon Go. 
 
 ## Proceso del Diseño 🎨
 ¿Quiénes son los principales usuarios de producto?
+Los principales usuarios del producto son jugadores de la aplicación Pokemon Go , que juegan de manera habitual , diariamente puesto que nuestra encuesta nos arrojó un total de 73 personas , las cuales estaban divididas en quienes juegan de manera habitual , considerandose ellos mismos como jugadores intermedios , es decir , que juegan para entretenerse , pero a la vez lo hacen de manera diaria . El otro porcentaje alto de judaores que contestó la encuesta realizada , son quienes se consideran como jugadores avanzados , estos a diferencia de los usuarios intermedios , necesitan mucha más información , puesto que juegan más y están más dedicados también a ganar en los distintos retos del juego.
 
 
 ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
+Los objetivos de los usarios en relación al juego , primeramente acercadonos a nuestro usario intermedio-avanzado , nos reveló así la encuesta que por una parte quienes estan más dedicados a coleccionar los diferentes pokemones que existen , desean ver información que les ayude a obtener estos tan apreciados pokemones , ya que algunos salen de manera más frecuente que otros que , no aparecen de manera fácil . Una manera de predecir en donde pueden salir estos últimos es encontrándolos en los huevos de la aplicación . Para ellos necesitan información de cuantos kilometros debe recorrer el usuario para poder tener la posibilidad que el pokemon deseado se encuentre en aquel huevo , es por eso que los huevos estan divididos en huevos de 2km , de 5 km y de 10 km . 
+
+Por otra parte el jugador avanzado , desea saber cuales son las fortalezas y debilidades de los pokemones que puede encontrar en los diferentes gimnasios , para poder saber cual pokemon debe usar , es decir , un pokemon de agua , puede ganarle a uno de tierra , etc . 
 
 
 ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
+Los datos más relevantes que nos arrojó la entrevista manual de los usarios , es que la web muestre de manera fácil , cuales son los pokemones que se pueden encontrar en los diversos huevos y sus kilometrajes , esto es la información principal para el usario coleccionador de los 151 pokemones que puede recolectar .
+El otro dato que esta más enfocado en el usario avanzado o experto es la que muestre de manera rápida y fácil la información que respecta con cuales los tipos de pokemones existentes y su clasificación , esta información ayuda al usuario a poder escoger  el pokemon indicado para derrotar en las luchas de gimnasios a otros pokemones , mostrando también en la web las debilidades de los pokemones para que el usario pueda seleccionar  el pokemon con el cual va a competir .
+
+
 
 
 ¿Cuándo utilizan o utilizarían el producto?
+El producto "InfoPokemon" es utilizado por el usuario cuando necesite encontrar informacion rapida sobre los tipos de pokemones y poder usar la informacion de manera inmediata , es por eso que la web ofrece una interfaz simple , ya qu el ainformacionse necesita al instante de estar planenando una batalla en el gimnasio , y esto es siempre de manera breve , puesto que cualquier jugador puede derrotar a los pokemones que se encuentran en el , posicionandose de manera rapido otro pokemon con al cual luchar .
+Además la información acerca de los huevos también es necesaria , pero de manera menos habitual , pero también de manera recurrente si hablamos de manera general . Se necesita en las ocaciones donde el jugador planea abrir y espera encontrar cierto pokemon adentro , viendo en la web las posibilidades que tiene para encontrar el pokemon deseado .
 
 
 
