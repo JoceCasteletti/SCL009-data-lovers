@@ -2,139 +2,120 @@
 <html lang="es">
 
 <head>
-   <meta charset="utf-8">
-   <title>Data Lovers</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-   <link rel="stylesheet" href="style.css" />
-   <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
 </head>
 
 <body>
-   <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-         <a class="navbar-brand" href="index.html"></a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"></a>
 
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-               <li class="nav-item active">
-                  <a class="nav-link" href="https://pokemongolive.com/es/post/" target="_blank">Blog<span
-                        class="sr-only">(current)</span></a>
-               </li>
-               <li class="nav-item active">
-                  <a class="nav-link" href="https://www.facebook.com/groups/927707053975442/"
-                     target="_blank">Comunidad<span class="sr-only">(current)</span></a>
-               </li>
-               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-                     aria-haspopup="true" aria-expanded="false">
-                     Descargar PokemonGo
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                     <a class="dropdown-item"
-                        href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_419"
-                        target="_blank">Descarga para Android </a>
-                     <a class="dropdown-item" href="https://itunes.apple.com/es/app/pok%C3%A9mon-go/id1094591345?mt=8"
-                        target="_blank">Descargar para IOS</a>
-                  </div>
-               </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-               <input id="search" class="form-control mr-sm-2" type="search" placeholder="Nombre / Id pokemón"
-                  aria-label="Search">
-               <button id="btn_search" class="btn btn-outline-success my-2 my-sm-0" type="button">Buscar</button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://pokemongolive.com/es/post/" target="_blank">Blog<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://www.facebook.com/groups/927707053975442/"
+                            target="_blank">Comunidad<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Descargar PokemonGo
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item"
+                                href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_419"
+                                target="_blank">Descarga para Android </a>
+                            <a class="dropdown-item"
+                                href="https://itunes.apple.com/es/app/pok%C3%A9mon-go/id1094591345?mt=8"
+                                target="_blank">Descargar para IOS</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input id="search" class="form-control mr-sm-2" type="search" placeholder="Nombre / Id pokemón"
+                        aria-label="Search">
+                    <button id="btn_search" class="btn btn-outline-success my-2 my-sm-0" type="button">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main class="container-fluid">
+        <section>
+            <img class="mx-auto d-block img-fluid" src="./img/InfoPokemon.png" id="imagen">
+            <form>
+                <div class="form-group row">
+                    <label for="select_egg" class="col-sm-2 col-form-label text-light">Huevos</label>
+                    <div class="col-sm-10">
+                        <select class="form-control menu" id="select_egg">
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="select_type" class="col-sm-2 col-form-label text-light">Tipos</label>
+                    <div class="col-sm-10">
+                        <select class="form-control menu" id="select_type">
+                            <option value="all">Todos</option>
+                            <option value="Water">Agua</option>
+                            <option value="Bug">Bicho</option>
+                            <option value="Dragon">Dragón</option>
+                            <option value="Electric">Eléctrico</option>
+                            <option value="Ghost">Fantasma</option>
+                            <option value="Fire">Fuego</option>
+                            <option value="Ice">Hielo</option>
+                            <option value="Fighting">Lucha</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Grass">Planta</option>
+                            <option value="Psychic">Psíquico</option>
+                            <option value="Rock">Roca</option>
+                            <option value="Ground">Tierra</option>
+                            <option value="Poison">Veneno</option>
+                            <option value="Flying">Volador</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="order_pokemon" class="col-sm-2 col-form-label text-light">Ordenar</label>
+                    <div class="col-sm-10">
+                        <select class="form-control menu" id="order_pokemon">
+                            <option value="az">A - Z</option>
+                            <option value="za">Z - A</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="filter" type="button" class="btn btn-outline-success">Buscar</button>
             </form>
-         </div>
-      </nav>
-   </header>
-   <main class="container-fluid">
-      <section>
-         <img class="mx-auto d-block img-fluid" src="./img/InfoPokemon.png" id="imagen">
-         <form>
-            <div class="form-group row">
-               <label for="select_egg" class="col-sm-2 col-form-label text-light">Huevos</label>
-               <div class="col-sm-10">
-                  <select class="form-control menu" id="select_egg">
-                  </select>
-               </div>
-            </div>
-            <div class="form-group row">
-               <label for="select_type" class="col-sm-2 col-form-label text-light">Tipos</label>
-               <div class="col-sm-10">
-                  <select class="form-control menu" id="select_type">
-                     <option value="all">Todos</option>
-                     <option value="Water">Agua</option>
-                     <option value="Bug">Bicho</option>
-                     <option value="Dragon">Dragón</option>
-                     <option value="Electric">Eléctrico</option>
-                     <option value="Ghost">Fantasma</option>
-                     <option value="Fire">Fuego</option>
-                     <option value="Ice">Hielo</option>
-                     <option value="Fighting">Lucha</option>
-                     <option value="Normal">Normal</option>
-                     <option value="Grass">Planta</option>
-                     <option value="Psychic">Psíquico</option>
-                     <option value="Rock">Roca</option>
-                     <option value="Ground">Tierra</option>
-                     <option value="Poison">Veneno</option>
-                     <option value="Flying">Volador</option>
-                  </select>
-               </div>
-            </div>
-            <div class="form-group row">
-               <label for="order_pokemon" class="col-sm-2 col-form-label text-light">Ordenar</label>
-               <div class="col-sm-10">
-                  <select class="form-control menu" id="order_pokemon">
-                     <option value="az">A - Z</option>
-                     <option value="za">Z - A</option>
-                  </select>
-               </div>
-            </div>
-            <button id="filter" type="button" class="btn btn-outline-success">Buscar</button>
-         </form>
-      </section>
-      <section id="pokemon_list" class="row">
-      </section>
-
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="modalTitle">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                   <img id="modalImg" src="http://www.serebii.net/pokemongo/pokemon/005.png" alt="">
-                <p id="modalNumber"></p>                
-                </div>
-                <div class="modal-footer">
-                  <p id="statistics"p>
-                </div>
-              </div>
-            </div>
-      </div>
-   </main>  
-   <footer>
-         <div class="text-center py-4">© 2019 Copyright: InfoPokemon</div>
-   </footer>
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
-   <script src="./data/pokemon/pokemon.js"></script>
-   <script src="data.js"></script>
-   <script src="main.js"></script>
+        </section>
+        <section id="pokemon_list" class="row">
+        </section>
+    </main>
+    <footer>
+        <div class="text-center py-4">© 2019 Copyright: InfoPokemon</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./data/pokemon/pokemon.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
@@ -151,7 +132,7 @@
 
 
 
-         <!-- Código modal de boostrap https://getbootstrap.com/docs/4.0/components/modal/#varying-modal-content
+<!-- Código modal de boostrap https://getbootstrap.com/docs/4.0/components/modal/#varying-modal-content
          <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -170,5 +151,4 @@
                </div>
             </div>
          </div> -->
-         <!-- Fin código modal de bootstrap -->
-  
+<!-- Fin código modal de bootstrap -->

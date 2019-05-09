@@ -43,19 +43,12 @@ const showData = (data) => {
           <h5 class="card-title">${element.name}</h5>
           <p class="card-text">Huevo: ${element.egg}</p>
           <p class="card-text">Tipo: ${types}</p>
-          <p class="card-text">Debilidad: ${element.weaknesses}</p>
-          <input type="button" value="Ver Estadísticas" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal" onclick="Modale(${element.id})">
+          <p class="card-text">Debilidad: ${weaknesses}</p>
         </div>
       </div>
     </div>`;
   })
-let modale = (element) => {
-let pokeModal = data.filter((a) => a.id ===element);
-  document.getElementById("modalTitle").innerHTML=pokeModal[0].name;
-  document.getElementById("counterEggs").innerHTML=pokeModal[0].egg;
-  
-}
-window.modale=modale;
+
 
   //Imprimir tarjeta en html
   pokemonList.innerHTML = html
@@ -79,10 +72,11 @@ window.addEventListener('load', () => {
   //Llamar función counterEgg y aproximar su valor con toFixed
   selectEgg.innerHTML = `
 <option value="all">Todos</option>
-<option value="Not in Eggs">No están en huevos (${window.counterEggs(data, 'Not in Eggs').toFixed(1)}%)</option>
-<option value="2 km">2 Km (${window.counterEggs(data, '2 km').toFixed(1)}%)</option>
-<option value="5 km">5 Km (${window.counterEggs(data, '5 km').toFixed(1)}%)</option>
-<option value="10 km">10 Km (${window.counterEggs(data, '10 km').toFixed(1)}%)</option>`;
+<option value="Not in Eggs">No están en huevos (${window.counterEggs(data, 'Not in Eggs')}%)</option>
+<option value="Omanyte Candy">Omanyte Candy (${window.counterEggs(data, 'Omanyte Candy')}%)</option>
+<option value="2 km">2 Km (${window.counterEggs(data, '2 km')}%)</option>
+<option value="5 km">5 Km (${window.counterEggs(data, '5 km')}%)</option>
+<option value="10 km">10 Km (${window.counterEggs(data, '10 km')}%)</option>`;
 });
 
 
