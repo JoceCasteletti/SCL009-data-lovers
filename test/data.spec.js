@@ -48,7 +48,7 @@ require('./data.spec.js');
   it('debería ser una función', () => {
     assert.equal(typeof window.filterByEgg ,'function');
   });
-   it('debería retornar Bulbasaur y Charmander para filtrar por huevo de "2 km"', () => {
+   it('debería retornar Bulbasaur  para filtrar por huevo de "2 km"', () => {
    assert.deepEqual(window.filterByEgg(data, "2 km"), 
    [
     {
@@ -117,39 +117,17 @@ describe('orderPokemon', () => {
    ]);
   });
 })
-describe('orderPokemon', () => {
+describe('counterEggs', () => {
   
   it('debería ser una función', () => {
-    assert.equal(typeof window.orderPokemon,'function');
+    assert.equal(typeof window.counterEggs,'function');
   });
-  it('debería retornar los pokemones ordenado de la Z a la A', () => {
-    assert.deepEqual(window.orderPokemon(data, "za"), [
-       {
-        "id": 128,
-        "num": "128",
-        "egg": "5 km",
-        "name": "Tauros",
-        "type": [
-          "Normal"
-        ]
-      }, {
-          "id": 52,
-         "num": "052",
-         "egg": "5 km",
-        "name": "Meowth",
-         "type": [
-           "Normal"
-         ]
-       }, {
-        "id": 1,
-       "num": "001",
-       "egg": "2 km",
-       "name": "Bulbasaur",
-       "type": [
-         "Grass",
-          "Poison"
-        ]
-      }
-    ]);
-   });
- })
+  it('debería retornar el porcentaje para huevos de 2 km', () => {
+    assert.deepEqual(window.counterEggs(data, "2 km"),
+       
+        33.333333333333336
+    )
+  });
+ });
+
+
