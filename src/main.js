@@ -27,11 +27,11 @@ const showData = (data) => {
       types += `<img class="card-img-type" src="img/types/${element.toLowerCase()}.png" title="${element}">`;
     })
     
-    let weaknesses='';
-
-    element.weaknesses.forEach(element => {
-      weaknesses += `<img class="card-img-type" src="img/types/${element.toLowerCase()}.png" title="${element}">`;
-    })
+    // let weaknesses='';
+    
+    // element.weaknesses.forEach(element => {
+    //   weaknesses += `<img class="card-img-type" src="img/types/${element.toLowerCase()}.png" title="${element}">`;
+    // })
 
     html += `
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 py-3">

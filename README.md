@@ -116,6 +116,8 @@ Se realizó una encuesta con el Formulario de Google Forms, con el objetivo de c
 
 La encuesta cual se pueden encontrar [aquí](https://docs.google.com/forms/d/e/1FAIpQLSfmEgCpqwzdoIJ9CleUnujALlSSBVGjK6tK0uWzkhkQ_kKF9w/viewform?usp=sf_link)
 
+ ## Mapa de flujo
+ ![mapadeflujo](./src/img/scan.jpg)
 
 ## Prototipo de baja fidelidad
 
@@ -128,6 +130,14 @@ La encuesta cual se pueden encontrar [aquí](https://docs.google.com/forms/d/e/1
 
 
 El prototipo se elaboró con [Figma](https://figma.com) el cual se pueden encontrar [*aquí*](https://www.figma.com/file/HmIYHbhPacwoAjkGMyFufeRk/POKEMON?node-id=0%3A1)
+
+## Testeando la web en usarios 
+
+Testeamos la web casi terminada en en usuario de Pokemon Go el cual en base a las principales funciones de la web , supo entender las funcionalidades y se le hizo de manera fácil poder obtener la información que se entrega . El feedback del usario nos permitió mejorar la interfaz , lo que el usario quizo fue que pudo mejorar su experiencia , si es que la barra de arriba , estuviera mejor posicionada y con mejores colores que permitieran entender la información que esta contenia .
+
+En base a este feedback y otros que no pudieron ser grabados fue que nos hizo mejorar la interfaz , especialmente el navBar para que puediese ser vistoy entendido mejor 
+
+#### El Link del video de testeo al usario puede ser visto  [*aquí*](https://www.youtube.com/watch?v=w2GYc_flKEo&feature=youtu.be)
 
 ### Prototipo de alta fidelidad en Zeplin 
 
