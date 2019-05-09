@@ -154,7 +154,7 @@ El prototipo de alta fidelidad en Zeplin lo puedes encontrar
   `README.md`.
 * [X] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
-* [ ] Incluye link a Zeplin en `README.md`.
+* [X] Incluye link a Zeplin en `README.md`.
 * [ ] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
 * [X] UI: Muestra lista y/o tabla con datos y/o indicadores.

@@ -22,9 +22,6 @@
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                <li class="nav-item active">
-                  <a class="nav-link" href=""> Instrucciones <span class="sr-only">(current)</span></a>
-               </li>
-               <li class="nav-item active">
                   <a class="nav-link" href="https://pokemongolive.com/es/post/" target="_blank">Blog<span
                         class="sr-only">(current)</span></a>
                </li>
@@ -102,6 +99,27 @@
       </section>
       <section id="pokemon_list" class="row">
       </section>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                   <img id="modalImg" src="http://www.serebii.net/pokemongo/pokemon/005.png" alt="">
+                <p id="modalNumber"></p>                
+                </div>
+                <div class="modal-footer">
+                  <p id="statistics"p>
+                </div>
+              </div>
+            </div>
+      </div>
+
          <!-- Código modal de boostrap https://getbootstrap.com/docs/4.0/components/modal/#varying-modal-content
          <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModalLabel"
             aria-hidden="true">

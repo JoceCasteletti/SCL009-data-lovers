@@ -28,7 +28,7 @@ const showData = (data) => {
     })
     
     let weaknesses='';
-    
+
     element.weaknesses.forEach(element => {
       weaknesses += `<img class="card-img-type" src="img/types/${element.toLowerCase()}.png" title="${element}">`;
     })
@@ -44,10 +44,18 @@ const showData = (data) => {
           <p class="card-text">Huevo: ${element.egg}</p>
           <p class="card-text">Tipo: ${types}</p>
           <p class="card-text">Debilidad: ${element.weaknesses}</p>
+          <input type="button" value="Ver Estadísticas" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal" onclick="Modale(${element.id})">
         </div>
       </div>
     </div>`;
   })
+let modale = (element) => {
+let pokeModal = data.filter((a) => a.id ===element);
+  document.getElementById("modalTitle").innerHTML=pokeModal[0].name;
+  document.getElementById("counterEggs").innerHTML=pokeModal[0].egg;
+  
+}
+window.modale=modale;
 
   //Imprimir tarjeta en html
   pokemonList.innerHTML = html
@@ -68,7 +76,7 @@ window.addEventListener('load', () => {
   showData(window.orderPokemon(data, 'a-z'));
 
   //Mostrar cálculo en el select 
-  //Llamar función counterEgg y aproximar su valor
+  //Llamar función counterEgg y aproximar su valor con toFixed
   selectEgg.innerHTML = `
 <option value="all">Todos</option>
 <option value="Not in Eggs">No están en huevos (${window.counterEggs(data, 'Not in Eggs').toFixed(1)}%)</option>
@@ -86,13 +94,12 @@ btnFilter.addEventListener('click', () => {
 
   let pokemonList = window.filterByEgg(data, km);
   pokemonList = window.filterByType(pokemonList, type);
-  pokemonList = window.orderPokemon(pokemonList, order);
+  pokemonList = window.orderPokemon(pokemonList,"name", order);
 
   showData(pokemonList);
 
 })
 // FIN: Acá se agregan los eventos de los elementos del DOM
-
 
 
 

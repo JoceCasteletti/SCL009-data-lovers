@@ -45,13 +45,13 @@ window.filterByName = filterByName
 // window.filterBy = filterBy
 
 // ordenar de la A - Z
-const orderPokemon = (data, sortOrder) => {
+const orderPokemon = (data, sortBy, sortOrder) => {
   // TODO: Implementar opciones de orden 
 
   const list = data.sort((a, b) => {
-    if (a.name > b.name)
+    if (a[sortBy] > b[sortBy])
       return 1;
-    if (a.name < b.name)
+    if (a[sortBy] < b[sortBy])
       return -1;
     return 0;
   });
