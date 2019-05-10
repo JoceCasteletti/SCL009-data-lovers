@@ -121,10 +121,10 @@ La encuesta cual se pueden encontrar [aquí](https://docs.google.com/forms/d/e/1
 
 ## Prototipo de baja fidelidad
 
-![prototipo1](./src/img/prototipo1.jpg)
-![prototipo2](./src/img/prototipo2.jpg)
-![prototipo3](./src/img/prototipo3.jpg)
-![prototipo4](./src/img/prototipo4.jpg)
+![prototipo1](https://img.fenixzone.net/i/Qo4jv8K.jpeg)
+![prototipo2](https://img.fenixzone.net/i/hFZLYCp.jpeg)
+![prototipo3](https://img.fenixzone.net/i/uUofwlW.jpeg)
+![prototipo4](https://img.fenixzone.net/i/UxQdNvw.jpeg)
 
 ## Prototipo de alta fidelidad
 
