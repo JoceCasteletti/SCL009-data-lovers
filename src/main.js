@@ -1,3 +1,9 @@
+fetch('https://raw.githubusercontent.com/JoceCasteletti/SCL009-data-lovers/master/src/data/pokemon/pokemon.json')
+      .then(response => 
+       response.json())
+      .then(data => {
+          const allPokemon = data.pokemon;
+
 //Referencias a los elementos del DOM
 const pokemonList = document.getElementById('pokemon_list')
 const selectType = document.getElementById('select_type')
@@ -9,8 +15,7 @@ const btnFilter = document.getElementById('filter');
 
 
 //Se deja referencia al arreglo de los pokémon
-let data = window.pokemon.pokemon;
-
+//let data = window.pokemon.pokemon;
 
 // EMPIEZA: Acá se declaran las funciones que manipulan el DOM
 
@@ -59,25 +64,26 @@ const showData = (data) => {
 // EMPIEZA: Acá se agregan los eventos de los elementos del DOM
 btnSearch.addEventListener("click", () => {
   const search = document.getElementById("search").value;
-  showData(window.filterByName(data, search));
+  showData(window.filterByName(allPokemon, search));
 });
-
 
 
 //Cuando termine de cargar la página va a desplegar la lista de pokemones
 window.addEventListener('load', () => {
-  showData(window.orderPokemon(data, 'a-z'));
+  showData(window.orderPokemon(allPokemon, 'a-z'));
+});
+
 
   //Mostrar cálculo en el select 
   //Llamar función counterEgg y aproximar su valor con toFixed
   selectEgg.innerHTML = `
 <option value="all">Todos</option>
-<option value="Not in Eggs">No están en huevos (${window.counterEggs(data, 'Not in Eggs')}%)</option>
-<option value="Omanyte Candy">Omanyte Candy (${window.counterEggs(data, 'Omanyte Candy')}%)</option>
-<option value="2 km">2 Km (${window.counterEggs(data, '2 km')}%)</option>
-<option value="5 km">5 Km (${window.counterEggs(data, '5 km')}%)</option>
-<option value="10 km">10 Km (${window.counterEggs(data, '10 km')}%)</option>`;
-});
+<option value="Not in Eggs">No están en huevos (${window.counterEggs(allPokemon, 'Not in Eggs')}%)</option>
+<option value="Omanyte Candy">Omanyte Candy (${window.counterEggs(allPokemon, 'Omanyte Candy')}%)</option>
+<option value="2 km">2 Km (${window.counterEggs(allPokemon, '2 km')}%)</option>
+<option value="5 km">5 Km (${window.counterEggs(allPokemon, '5 km')}%)</option>
+<option value="10 km">10 Km (${window.counterEggs(allPokemon, '10 km')}%)</option>`;
+
 
 
 //Filtro múltiple huevo,tipo y ordenar
@@ -86,7 +92,7 @@ btnFilter.addEventListener('click', () => {
   const type = selectType.value;
   const order = sortPokemon.value;
 
-  let pokemonList = window.filterByEgg(data, km);
+  let pokemonList = window.filterByEgg(allPokemon, km);
   pokemonList = window.filterByType(pokemonList, type);
   pokemonList = window.orderPokemon(pokemonList,"name", order);
 
@@ -96,7 +102,7 @@ btnFilter.addEventListener('click', () => {
 // FIN: Acá se agregan los eventos de los elementos del DOM
 
 
-
+      });
 //
 
 
