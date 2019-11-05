@@ -106,52 +106,44 @@ btnFilter.addEventListener('click', () => {
 //
 
 
+// Código modal de boostrap https://getbootstrap.com/docs/4.0/components/modal/#varying-modal-content
+$('#pokemonModal').on('show.bs.modal', function (event) {
+  const button = $(event.relatedTarget) // Botón que activó el modal
+  const pokemonId = button.data('id') // Extrayendo información de la data-id
 
+  const pokemon = data.filter(element => element.id === pokemonId)[0]; // Obtener pokémon por su id
+  //para poder buscar sus
 
+  let types = '';
 
+  pokemon.type.forEach(element => {
+    types += `<img class="card-img-type" src="img/types/${element.toLowerCase()}.png" title="${element}">`;
+  })
 
+  let weaknesses = '';
 
+  pokemon.weaknesses.forEach(element => {
+    weaknesses += `<img class="card-img-type" src="img/types/${element.toLowerCase()}.png" title="${element}">`;
+  })
 
+  const title = document.getElementById('modal_title');
 
+  title.innerHTML = pokemon.name;
 
-// // Código modal de boostrap https://getbootstrap.com/docs/4.0/components/modal/#varying-modal-content
-// $('#pokemonModal').on('show.bs.modal', function (event) {
-//   const button = $(event.relatedTarget) // Botón que activó el modal
-//   const pokemonId = button.data('id') // Extrayendo información de la data-id
+  const body = document.getElementById('modal_body');
 
-//   const pokemon = data.filter(element => element.id === pokemonId)[0]; // Obtener pokémon por su id
-//   //para poder buscar sus
-
-//   let types = '';
-
-//   pokemon.type.forEach(element => {
-//     types += `<img class="card-img-type" src="img/types/${element.toLowerCase()}.png" title="${element}">`;
-//   })
-
-//   let weaknesses = '';
-
-//   pokemon.weaknesses.forEach(element => {
-//     weaknesses += `<img class="card-img-type" src="img/types/${element.toLowerCase()}.png" title="${element}">`;
-//   })
-
-//   const title = document.getElementById('modal_title');
-
-//   title.innerHTML = pokemon.name;
-
-//   const body = document.getElementById('modal_body');
-
-//   body.innerHTML = `
-//   <div class="card h-100">
-//     <div class="card-img-wrapper">
-//     <img class="card-img mx-auto d-block" src="${pokemon.img}" alt="${pokemon.name}">
-//     </div>
-//     <div class="card-body">
-//       <p class="card-text">ID: ${pokemon.num}</p>
-//       <p class="card-text">Huevo: ${pokemon.egg}</p>
-//       <p class="card-text">Peso: ${pokemon.weight}</p>
-//       <p class="card-text">Estatura: ${pokemon.height}</p>
-//       <p class="card-text">Tipo: ${types}</p>
-//       <p class="card-text">Debilidades: ${weaknesses}</p>
-//     </div>
-//   </div>`;
-// });
+  body.innerHTML = `
+  <div class="card h-100">
+    <div class="card-img-wrapper">
+    <img class="card-img mx-auto d-block" src="${pokemon.img}" alt="${pokemon.name}">
+    </div>
+    <div class="card-body">
+      <p class="card-text">ID: ${pokemon.num}</p>
+      <p class="card-text">Huevo: ${pokemon.egg}</p>
+      <p class="card-text">Peso: ${pokemon.weight}</p>
+      <p class="card-text">Estatura: ${pokemon.height}</p>
+      <p class="card-text">Tipo: ${types}</p>
+      <p class="card-text">Debilidades: ${weaknesses}</p>
+    </div>
+  </div>`;
+});
